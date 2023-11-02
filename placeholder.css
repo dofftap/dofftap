@@ -1,0 +1,49 @@
+:root {
+    --color-1: #4ba6b8; /* teal */
+    --color-2: #edb751; /* yellow-orange */
+  }
+
+
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+}
+
+.container {
+    display: grid;
+    place-items: center;  
+    text-align: center;
+    height: 100vh
+}
+
+a {
+    color: var(--color-1);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+
+    border-bottom: solid 2px var(--color-2);
+    color: var(--color-2);
+}
+
+h1 {
+    border-bottom: solid 1vw var(--color-2);
+    color: var(--color-1);
+    font-weight: 800;
+    font-size: 38px;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 600px) {
+    h1 {
+        font-size: 6.5vw;
+    }
+}
+@media screen and (min-width: 1300px) {
+    h1 {
+        font-size: 84px;
+    }
+}
