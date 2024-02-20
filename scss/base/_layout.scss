@@ -22,60 +22,83 @@ body {
     margin: 0 auto;
     padding: 0 50px;
     width: 100%;
+
+
+    &.upper_site {
+        background: white;
+        @include breakpoint('small') {
+            background: transparent;
+        }
+    }
 }
 
 .wrapper {
     display: flex;
-    margin-bottom: 5rem;
+    flex-direction: column;
+    margin-bottom: 2rem;
     width: 100%;
+    @include breakpoint('small') {
+        flex-direction: row;
+        margin-bottom: 5rem;
+    }
+     + .wrapper {
+        margin-bottom: 0;
+    }
+    &:last-of-type {
+        margin-bottom: 2rem;
+    }
 }
 
 .text {
     background-color: white;
-    margin: 2rem 0;
-    padding: 2rem;
-    width: 40%;
+    margin: 2rem -50px;
+    min-width: 460px;
+    padding: 50px;
+    @include breakpoint('small') {
+        width: 60%;
+    }
 }
-
-.imgborders .wrapper figure {
-    border: solid 5px black;
-}
-
-.smallimages .wrapper .text { width: 60%; }
-.smallimages .wrapper figure { width: 50%; }
 
 .wrapper figure {
-    position: absolute;
+    align-items: center;
+    display: flex;
+    height: 400px;
     margin: 0;
-    max-height: 100%;
-    min-width: 400px;
+    max-height: 50vh;
     overflow: hidden;
-    width: 70%;
+    @include breakpoint('small') {
+        height: auto;
+        max-height: 100%;
+        position: absolute;
+        width: 50%;
+    }
 }
+
 .wrapper img {
     width: 100%;
     height: auto;
     display: block;
+    object-fit: cover;
+    object-position: center center;
 }
 
 .img-left {
     justify-content: flex-end;
-}
-
-.img-left figure {
-    left: 0;
-}
-.img-left .text {
-    margin-right: -2rem;
+    figure {
+        left: 0;
+    }
+    .text {
+        // margin-right: -2rem;
+    }
 }
 
 .img-right {
     justify-content: flex-start;
+    figure {
+        right: 0;
+    }
+    .text {
+        // margin-left: -2rem;
+    }
+    
 }
-.img-right figure {
-    right: 0;
-}
-.img-right .text {
-    margin-left: -2rem;
-}
-
