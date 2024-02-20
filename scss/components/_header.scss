@@ -1,0 +1,29 @@
+/* header */
+
+header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+header::before {
+    content: '';
+    width: 100%;
+    height: 10px;
+    background: var(--color-1);
+    display: block;
+    transform: translateY(126px);
+}
+
+header img {
+    background-color: white;
+    margin: 0 auto;
+    max-width: 200px;
+}
+
+header p {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: .025rem;
+    text-transform: uppercase;
+    transform: translateY(-22px);
+}
