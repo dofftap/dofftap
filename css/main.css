@@ -9,9 +9,7 @@ a {
   color: var(--color-1);
   text-decoration: none;
 }
-
-a:hover,
-a:focus {
+a:active, a:hover, a:focus {
   border-bottom: solid 2px var(--color-2);
   color: var(--color-2);
 }
@@ -38,6 +36,11 @@ blockquote {
   border: solid 2px var(--color-2);
   margin: 0 0 3rem;
   padding: 1.6rem 3rem;
+}
+
+.intro_copy {
+  margin-bottom: 0;
+  max-width: 54rem;
 }
 
 /* button styles */
@@ -128,7 +131,7 @@ body {
     height: auto;
     max-height: 100%;
     position: absolute;
-    width: 50%;
+    width: 60%;
   }
 }
 
@@ -146,6 +149,10 @@ body {
 .img-left figure {
   left: 0;
 }
+.img-left .text {
+  margin: 2rem 0 2rem -50px;
+}
+
 .img-right {
   justify-content: flex-start;
 }

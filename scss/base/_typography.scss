@@ -4,13 +4,13 @@
 a {
     color: var(--color-1);
     text-decoration: none;
+
+    @include hocus {
+        border-bottom: solid 2px var(--color-2);
+        color: var(--color-2);
+    }
 }
 
-a:hover,
-a:focus {
-    border-bottom: solid 2px var(--color-2);
-    color: var(--color-2);
-}
 
 h1 {
     color: var(--color-1);
@@ -34,4 +34,9 @@ blockquote {
     border: solid 2px var(--color-2);
     margin: 0 0 3rem;
     padding: 1.6rem 3rem;
+}
+
+.intro_copy {
+    margin-bottom: 0;
+    max-width: 54rem;
 }

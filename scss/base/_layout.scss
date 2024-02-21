@@ -76,7 +76,7 @@ body {
         height: auto;
         max-height: 100%;
         position: absolute;
-        width: 50%;
+        width: 60%;
     }
 }
 
@@ -94,7 +94,7 @@ body {
         left: 0;
     }
     .text {
-        // margin-right: -2rem;
+        margin: 2rem 0 2rem -50px;
     }
 }
 
@@ -104,6 +104,9 @@ body {
         right: 0;
     }
     .text {
+        @include breakpoint('small') {
+            
+        }
         // margin-left: -2rem;
     }
     
