@@ -2,12 +2,13 @@
 /* typography styles */
 
 a {
-    color: var(--color-1);
+    border-bottom: solid 2px var(--color-2);
+    color: var(--color-1d);
     text-decoration: none;
 
     @include hocus {
-        border-bottom: solid 2px var(--color-2);
-        color: var(--color-2);
+        border-bottom: solid 2px var(--color-1);
+        color: var(--color-1);
     }
 }
 
@@ -27,16 +28,4 @@ p {
     font-size: 16px;
     line-height: 1.7;
     position: relative;
-}
-
-blockquote {
-    background: white;
-    border: solid 2px var(--color-2);
-    margin: 0 0 3rem;
-    padding: 1.6rem 3rem;
-}
-
-.intro_copy {
-    margin-bottom: 0;
-    max-width: 54rem;
 }

@@ -20,7 +20,7 @@ body {
 .container {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0 50px;
+    // padding: 0 50px;
     width: 100%;
 
 
@@ -53,39 +53,54 @@ body {
             margin-bottom: 5rem;
         }
     }
+
+    figure {
+        align-items: center;
+        display: flex;
+        margin: 0;
+        max-height: 50vh;
+        overflow: hidden;
+
+        @include breakpoint('tiny') {
+            height: 400px;
+        }
+
+        @include breakpoint('small') {
+            height: auto;
+            max-height: 100%;
+            position: absolute;
+            width: 60%;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        object-position: center center;
+    }
+
 }
 
 .text {
-    background-color: white;
-    margin: 2rem -50px;
-    min-width: 460px;
-    padding: 50px;
-    @include breakpoint('small') {
-        width: 60%;
-    }
-}
+    margin: 0 auto;
+    padding: 20px;
 
-.wrapper figure {
-    align-items: center;
-    display: flex;
-    height: 400px;
-    margin: 0;
-    max-height: 50vh;
-    overflow: hidden;
-    @include breakpoint('small') {
-        height: auto;
-        max-height: 100%;
-        position: absolute;
-        width: 60%;
+    @include breakpoint('tiny') {
+        padding: 50px;
     }
-}
 
-.wrapper img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    object-position: center center;
+    &.intro_copy {
+        font-size: 17px;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        @include breakpoint('small') {
+            font-size: 18px;
+        }
+    }
 }
 
 .img-left {
@@ -94,7 +109,11 @@ body {
         left: 0;
     }
     .text {
-        margin: 2rem 0 2rem -50px;
+        background-color: white;
+        margin: 2rem 0;
+        @include breakpoint('small') {
+            width: 60%;
+        }
     }
 }
 
@@ -104,10 +123,34 @@ body {
         right: 0;
     }
     .text {
+        background-color: white;
+        margin: 2rem 0;
         @include breakpoint('small') {
-            
+            width: 60%;
         }
-        // margin-left: -2rem;
+    }   
+}
+
+
+blockquote {
+    background: white;
+    border: solid 2px var(--color-2);
+    font-size: 17px;
+    margin: 0 auto 3rem;
+    padding: 1.6rem 15px;
+    width: calc(100% - 20px);
+
+    @include breakpoint('tiny') {
+        padding: 1.6rem 50px;
+        width: calc(100% - 50px);
     }
-    
+
+    @include breakpoint('small') {
+        padding: 1.6rem 50px;
+        width: calc(100% - 100px);
+    }
+
+    p {
+        font-size: 17px;
+    }
 }
